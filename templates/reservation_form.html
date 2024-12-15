@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1>ARHOTEL A Luxury Hotel</h1>
+                        <p>Here are the best hotel booking sites, including recommendations for international
+                            travel and for finding low-priced hotel rooms.</p>
+
+                </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h3>Reservation Details</h3>
+                       {% if messages %} {% for message in messages %}
+    {% if message.tags == 'info' %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+   {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {% endif %}
+                         {% endfor %} {% endif %}
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <div class="check-date">
+                                <label >Room no:</label>
+                                <input type="text" value="{{room}}" disabled>
+
+                            </div>
+                             <div class="check-date">
+                  <label for="date-in">Check In:</label>
+                  <input type="text" class="date-input" id="date-in"  name="in"/>
+                  <i class="icon_calendar"></i>
+                </div>
+                <div class="check-date">
+                  <label for="date-out">Check Out:</label>
+                  <input type="text" class="date-input" id="date-out" name="out"/>
+                  <i class="icon_calendar"></i>
+                </div>
+<!--                            <a href="#" class="btn btn-primary" role="button" >Submit</a>-->
+                            <button type="submit" class="btn btn-primary" value="submit" name="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary" value="cancle" name="cancle">Cancle</button>
+<!--                            <a href="{% url 'hotel' %}" class="primary-btn">More Details</a>-->
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="{% static 'img/hero/hero-1.jpg' %}"></div>
+            <div class="hs-item set-bg" data-setbg="{% static 'img/hero/hero-2.jpg' %}"></div>
+            <div class="hs-item set-bg" data-setbg="{% static 'img/hero/hero-3.jpg' %}"></div>
+        </div>
+    </section>
+
+
+{% endblock %}

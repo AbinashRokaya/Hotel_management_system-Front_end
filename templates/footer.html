@@ -1,0 +1,91 @@
+{% load static %}
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ft-about">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="{% static 'img/logo_2.png' %}" alt="">
+                                </a>
+                            </div>
+                            <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
+                            <div class="fa-social">
+                                <a href="https://www.facebook.com/abinash.rokaya.562/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://x.com/RokayaAbin88879"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.tripadvisor.com/"><i class="fa fa-tripadvisor"></i></a>
+                                <a href="https://www.instagram.com/abinash_rokaya_25/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@sport_news123"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-contact">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li>(+977) 9742822635</li>
+                                <li>rcabinash2020@gmail.com</li>
+                                <li>lalitpur, Nepal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-newslatter">
+                            <h6>New latest</h6>
+                            <p>Get the latest updates and offers.</p>
+<!--                            <form action="#" class="fn-form">-->
+<!--                                <input type="text" placeholder="Email">-->
+<!--                                <button type="submit"><i class="fa fa-send"></i></button>-->
+<!--                            </form>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'term' %}">Terms of use</a></li>
+                            <li><a href="{% url 'policy' %}">Privacy</a></li>
+                            <li><a href="{% url 'environment' %}">Environmental Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/AbinashRokaya" target="_blank">Abinash Rokaya</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
